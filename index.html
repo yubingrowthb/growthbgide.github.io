@@ -13,14 +13,21 @@
     font-style: normal;
 }
 
-    body {font-family: Pretendard-Regular; margin:2rem; background-color: #282828; color: #fff;}
+    body {font-family: Pretendard-Regular; margin:2rem; padding: 50px; background-color: #282828; color: #fff;}
     a {color: #fff; text-decoration: none;}
-    ul {list-style: none;}
+    .list {padding:0 15px;}
+    ul {list-style: none; padding: 0; margin: 0;}
     .text_bold {font-weight: 600;}
-    .list > li {line-height: 30px;}
+    li {line-height: 2;}
+    .list > li:hover {font-weight: 600;}
     span, img {display: block; line-height: 30px;}
     #con_1, #con_2, #con_3  {padding: 50px 0;}
     .sub_txt, .sub_txt > a {color: #e3e3e3; opacity: 0.7;}
+    .pg_img {display: flex; width: 1200px; }
+    .pg_img > img {width: 50%; object-fit: cover;}
+    .line_hover {font-weight: 600;}
+    .line_hover:hover, .gide_line:hover {text-decoration:underline;}
+    .pg_txt {line-height: 2;}
     #con_2 > .text_bold {margin-top: 30px;}
     #scroll_btn {background-color: #fff; width: 50px; height: 50px; position: fixed; right: 50px; bottom:50px; border-radius: 50%; cursor: pointer;}
     #scroll_btn > span {color: #282828; text-align: center; line-height: 50px; font-size: 25px;}
@@ -36,10 +43,28 @@
         </ul>
         <div id="con_1" >
             <h1>사전 준비</h1>
-            <span class="sub_txt"><a href="gide.pdf" target="_blank">*대표님께 전달드릴 가이드 파일_pdf(참고용으로 확인해주세요.)</a></span>
+            <span class="sub_txt"><a class="gide_line" href="gide.pdf" target="_blank">*대표님께 전달드릴 가이드 파일_pdf(참고용으로 확인해주세요.)</a></span>
             <span><h2>대표님께 받아야 할 자료</h2><span class="text_bold">1. 로고 / 2. 상세페이지·썸네일 / 3. 레퍼런스 (동적 효과 필수)</span></span>
             <span  class="sub_txt"> *상세페이지·썸네일: PG사 신청 시 1개의 상품은 필수적으로 있어야 하기 때문에 받아둬야 함.</span>
             <span  class="sub_txt"> *레퍼런스: 레퍼런스를 통해 비슷한 cafe24 스킨 구매가 가능하므로, 가능한 링크로 받아두는 게 좋음.</span>
+
+            <h2>PG사 신청 요청</h2>
+            <span>CAFE24  → 부가서비스  → 통합결제(PG) / 카페24페이먼츠(pg)에 있음.  </span>
+            <div class="pg_img">
+                <img src="img/pg_cafe24.png" alt="cafe24페이먼츠">
+                <img src="img/mobile_pg.png" alt="모바일 페이먼츠">
+            </div>
+            <ul class="pg_txt">
+                <li><a class="line_hover"  href="https://growthboosters.cafe24.com/disp/admin/shop/frame?menu=9097" target="_blank"> 1. CAFE24 페이먼츠</a></li>
+                <li class="sub_txt">- 심사가 복잡하여 사업자등록증 (3개월 이내) & 통신 판매업 (3개월 이내)로 신청해야 함. *cafe24는 대표님이 신청하셔야 함.</li>
+                <li class="sub_txt">- 실제 운영하는 쇼핑몰처럼 보여야하기 때문에 최소 상품 1개 이상은 등록해야 하며, 해외 배송이나 프리오더라는 단어가 사이트에 들어가면 안 됨.</li>
+                <li class="sub_txt">- 푸터와 사업자등록증 주소가 일치해야 함. 대략 7일 정도 소요되며 한 번 반려될 경우 서류가 더 깐깐해지므로 한 번에 승인되는 게 좋음.</li>
+                <li><a class="line_hover" href="https://bm-svc.cafe24.com/service/addsvcSubHub?hub_code=pg_root" target="_blank"> 2. 모빌리언스</a></li>
+                <li class="sub_txt">- CAFE24 페이먼츠에 비해 비교적 간단한 편. 신청은 자사에서 가능함.</li>
+                <li class="sub_txt">- CAFE24가 PC 결제가 가능하다면 모빌리언스는 모바일에서 결제하기 위해 신청함.</li>
+                <li class="sub_txt">- 서류도 그렇게 복잡하지 않고, 3일 이내는 신청이 완료됨.</li>
+                <li>*디자인 스킨만 구매하고 나서, 커스텀 하기 전에 pg사 먼저 신청하는 것이 작업할 때 효율적임.</li>
+            </ul>
         </div>
         <div id="con_2" >
             <h1>사이트 작업</h1>
@@ -51,9 +76,17 @@
             <span>- 3개 정도 정하여 대표님께 전달드린 후 최종적으로 결정된 스킨 구매 (자사에서 구매할 수도 있고, 클라이언트 쪽에서 구매할 수도 있음.)</span>
             <h2>작업 순서 정하기</h2>
             <img style="width: 800px;" src="img/di_01.png" alt="ai 이미지">
-            <span>- cafe24 로그인 → 디자인 → 디자인 보관함 →  디자인 편집 <span class="sub_txt">만에 하나 상황으로 구매한 스킨은 꼭 복사 해 주세요.</span> </span>
-            <span>- header → footer → menu → main → sub page(상세페이지/상품 리스트/마이 페이지 등) </span>
+            <span>- cafe24 로그인 → 디자인 → 디자인 보관함 →  디자인 편집 <span class="sub_txt">만에 하나 상황으로 구매한 스킨은 제작하기 전에 꼭 복사 해 주세요.</span> </span>
+            <span>- header → footer → menu(nav) → main → sub page(상세페이지/상품 리스트/마이 페이지 등) </span>
             <span>작업이 끝나면 사이트 주소와 함께 피드백 요청 해 주세요.</span>
+            <ul> 
+                <li><h3>제작하기 전 주의사항</h3></li>
+                <li>1. 모듈은 될 수 있으면 건드리지 말아주세요. 모듈 잘못 건드릴 시, 사이트 동작이 안 됩니다.</li>
+                <li>2. cafe24는 바닐라 스크립트를 주로 사용하며, jQurey는 될 수 있으면 사용하지 말아주세요. </li>
+                <li>3. 사이트 저장을 했는데 바뀌지 않을 경우, 사이트 캐시 삭제를 해 주시면 동작됩니다. (그래도 동작이 안 될 경우 인터넷 브라우저 캐시 삭제를 해 주세요.) </li>
+                <li>4. 수정할 페이지의 경로를 못 찾겠다 싶으면 사이트에 들어가서 url 확인하면 경로가 나옵니다. (ex. product/list.html)</li>
+                <li>5. CAFE24는 대부분 관리자 페이지와 연동이 되어 있습니다. 구현하실 때 inline Tag로 되어있는 코드들은 대부분 CAFE24 관리자 페이지에서 수정하실 수 있으며, 모듈 역시 관리자 페이지와 연동이 되어 있습니다.</li>
+            </ul>
                    
         </div>
         <div id="con_3">
@@ -65,11 +98,19 @@
            <span>- 대표 도메인 연결에서 구매한 도메인이 안 뜰 경우 네임 서버가 등록이 되지 않아서이므로, 도메인 설정에서 네임 서버 등록</span>
            <span class="sub_txt">cafe24 챗봇은 굉장히 자세하게 알려주므로 헷갈리는 경우 챗봇 문의를 통하여 문의할 것</span>
            <img src="img/domain_2.png" alt="ai 이미지">
+           <h2>타사 도메인일 시</h2>
+           <img style="width: 800px;" src="img/nameserver.png" alt="ai 이미지">
+           <span>- 대표 도메인 연결에서 구매한 도메인이 안 뜰 경우 네임 서버가 등록이 되지 않아서이므로, 도메인 설정에서 네임 서버 등록</span>
+           <span>- <a class="line_hover" href="https://hosting.cafe24.com/" target="_blank">호스팅센터 로그인</a> → 나의 서비스 관리 → 도메인 관리 → 네임서버 변경 </span>
+           <span class="sub_txt">cafe24 측에서 제공하는 네임서버로 변경 (챗봇 문의 시 cafe24 네임서버 알려줌) 가비아·식스샵 등 타사 호스팅은 동일한 방법으로 수정.</span> 
+           <span class="sub_txt">ㄴ타사 도메인을 cafe24로 변경할 경우 각각 방법이 다르므로, 구글에 검색하는 게 가장 베스트 방법</span> 
+           
         </div>
         <div id="con_4">
             <h1>배너 작업</h1>
             <span>- 2차 수정 작업까지 끝이 나면 최종 완료이므로, 배너 작업에 들어가기. 팝업 사이즈는 대략 500px*600px로 제작하며, 배너 같은 경우는 F12 개발자 모드로 통하여 확인이 필요.</span>
-            <span>- 구매한 스킨이 반응형일 경우 pc 배너만 제작하면 되지만 모바일일 경우는 pc/mobile 두 개 다 제작이 필요.</span>
+            <span class="sub_txt">만약 cafe24 앱에서 배너 변경할 경우(배너 디자인 APP) 모바일, PC 배너는 따로 따로 제작해야 함. </span> 
+            <span class="sub_txt">반응형일 경우 웹 FTP 통하여 이미지 업로드 후, img src="복사한 링크" 만 변경하면 됨.</span> 
         </div>
     </div>
     <div id="scroll_btn"><span>↑</span></div>
